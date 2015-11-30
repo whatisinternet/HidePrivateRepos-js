@@ -21,6 +21,9 @@
       "all_frames": true
     }
   ],
+  "background": {
+    "scripts":["src/enable.js"]
+  },
   "minimum_chrome_version": "22.0",
   "permissions": [
       "contextMenus",
@@ -29,6 +32,7 @@
       "webNavigation",
       "webRequest",
       "webRequestBlocking",
+      "notifications",
       "http://*/*",
       "https://*/*"
   ],
