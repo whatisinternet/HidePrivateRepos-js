@@ -10,13 +10,19 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["http://*.github.com/*", "https://*.github.com/*"],
+      "js": ["src/jquery-2.1.4.min.js", "src/content-script.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["http://*.github.com/*", "https://*.github.com/*"],
       "js": ["src/jquery-2.1.4.min.js", "src/content-script.js"],
       "run_at": "document_end",
       "all_frames": true
     },
     {
-      "matches": ["http://*/*", "https://*/*"],
+      "matches": ["http://*.github.com/*", "https://*.github.com/*"],
       "js": ["src/jquery-2.1.4.min.js", "src/content-script.js"],
       "all_frames": true
     }
