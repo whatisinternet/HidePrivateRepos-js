@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "icon-disabled.png",
     "default_title": "Hide Private GitHub Repositories",
     "set_badge_text": "Enabled"
 
+  },
+  "icons": {
+    "16":  "logo.png",
+    "48":  "logo.png",
+    "128": "logo.png"
   },
   "content_scripts": [
     {
@@ -32,15 +37,9 @@
   },
   "minimum_chrome_version": "22.0",
   "permissions": [
-      "contextMenus",
-      "storage",
       "tabs",
-      "webNavigation",
-      "webRequest",
-      "webRequestBlocking",
-      "notifications",
-      "http://*/*",
-      "https://*/*"
+      "http://*.github.com/*",
+      "https://*.github.com/*"
   ],
   "short_name": "HidePrivateRepos"
 }
